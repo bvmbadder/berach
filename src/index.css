@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Mikado';
+  src: url('./assets/font/HvDTrial_Mikado-Bold-BF65c194eb8b644.otf') format('opentype');
+  font-weight: 700;  /* Adjust based on the weight of the font */
+  font-style: normal;
+}
+
+.__className_c48b40 {
+  font-family: __DM_Sans_c48b40, __DM_Sans_Fallback_c48b40;
+  font-style: normal;
+}
+.w-full {
+  width: 100%;
+}
+body {
+  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: Mikado, sans-serif;
+}
+body {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+body {
+  margin: 0;
+  line-height: inherit;
+}
+
+.layout {
+  height: -moz-fit-content;
+  height: fit-content;
+  background: linear-gradient(180deg, #15161f 50%, #5086c6 66.18%, #4fa5e7 75.09%, #8dc7ea);
+}
+
+.animate-float {animation: float var(--float-duration) infinite ease-in-out;}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Move up */
+  }
+  100% {
+    transform: translateY(0); /* Move back to original position */
+  }
+}
+
+/* In your global CSS or styles.css file */
+@keyframes moveInOut {
+  0% {
+    transform: translateX(-100%) translateY(100%) translateZ(0);
+  }
+  50% {
+    transform: translateX(0) translateY(0) translateZ(0);
+  }
+  100% {
+    transform: translateX(100%) translateY(-100%) translateZ(0);
+  }
+}
+
+.animate-moveInOut {
+  animation: moveInOut 4s ease-in-out forwards;
+}
+
+.animate-slide {
+  animation: slide 15s linear infinite;
+}
+
+@keyframes smooth-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Moves up */
+  }
+  100% {
+    transform: translateY(0); /* Returns to original position */
+  }
+}
+
+.smooth-bounce {
+  animation: smooth-bounce 2s ease-in-out infinite; /* Custom duration and easing */
+}
+
+aside {
+  background-color: #fde68a;
+  width: 18.75rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+}
